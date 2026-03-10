@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Береста Мессенджер v2.0.0 | Скачать приложение</title>
-    <meta name="description" content="Береста - безопасный мессенджер с аудио и видеозвонками. Скачайте бесплатно для Android версию 2.0.0.">
+    <title>Береста Мессенджер | Скачать приложение</title>
+    <meta name="description" content="Береста - безопасный мессенджер с аудио и видеозвонками. Скачайте бесплатно для Android.">
     
     <!-- Open Graph для соцсетей -->
-    <meta property="og:title" content="Береста Мессенджер v2.0.0">
+    <meta property="og:title" content="Береста Мессенджер">
     <meta property="og:description" content="Безопасный мессенджер с аудио и видеозвонками">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://beresta.ru">
@@ -43,7 +43,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -97,105 +97,18 @@
             border-radius: 50px;
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .app-tagline {
-            font-size: 20px;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-        
-        .app-badges {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 500;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .badge i {
-            margin-right: 8px;
-        }
-        
-        .content {
-            padding: 60px 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        
-        @media (max-width: 768px) {
-            .content {
-                grid-template-columns: 1fr;
-                padding: 40px 20px;
-            }
-        }
-        
-        .features {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-        
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 20px;
-            transition: transform 0.3s ease;
-        }
-        
-        .feature:hover {
-            transform: translateX(10px);
-            background: #f0f2f5;
-        }
-        
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-        }
-        
-        .feature-text h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #333;
-        }
-        
-        .feature-text p {
-            color: #666;
-            line-height: 1.5;
         }
         
         .download-section {
-            background: #f8f9fa;
-            border-radius: 30px;
-            padding: 40px;
+            padding: 50px 40px;
             text-align: center;
         }
         
         .download-title {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -203,41 +116,19 @@
             -webkit-text-fill-color: transparent;
         }
         
-        .whats-new {
-            background: #e3f2fd;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            text-align: left;
-        }
-        
-        .whats-new h3 {
-            color: #0d47a1;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        
-        .whats-new ul {
-            color: #0d47a1;
-            margin-left: 20px;
-            line-height: 1.6;
-        }
-        
-        .whats-new li {
-            margin-bottom: 5px;
-        }
-        
         .download-subtitle {
             color: #666;
             margin-bottom: 30px;
             line-height: 1.6;
+            font-size: 18px;
         }
         
         .download-buttons {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            margin-bottom: 30px;
+            max-width: 400px;
+            margin: 0 auto 30px;
         }
         
         .btn-download {
@@ -293,6 +184,9 @@
             background: white;
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .qr-code img {
@@ -307,33 +201,22 @@
         }
         
         .version-info {
-            margin-top: 20px;
+            margin-top: 30px;
             color: #adb5bd;
             font-size: 14px;
         }
         
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid #dee2e6;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 24px;
-            font-weight: 700;
-            color: #667eea;
-        }
-        
-        .stat-label {
+        .direct-link {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 12px;
             color: #6c757d;
-            font-size: 14px;
-            margin-top: 5px;
+            margin-top: 20px;
+            word-break: break-all;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .footer {
@@ -387,30 +270,6 @@
             background: #667eea;
             color: white;
         }
-        
-        .alert {
-            background: #fff3cd;
-            color: #856404;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ffeeba;
-            font-size: 14px;
-        }
-        
-        .alert i {
-            margin-right: 8px;
-        }
-        
-        .direct-link {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 12px;
-            color: #6c757d;
-            margin-top: 15px;
-            word-break: break-all;
-        }
     </style>
 </head>
 <body>
@@ -423,148 +282,44 @@
             <div class="version-badge">
                 <i class="fas fa-tag"></i> Версия 2.0.0
             </div>
-            <p class="app-tagline">Безопасный и быстрый мессенджер</p>
-            <div class="app-badges">
-                <span class="badge"><i class="fas fa-shield-alt"></i> Шифрование</span>
-                <span class="badge"><i class="fas fa-video"></i> Видеозвонки</span>
-                <span class="badge"><i class="fas fa-file"></i> Файлы</span>
-                <span class="badge"><i class="fas fa-users"></i> Группы</span>
-            </div>
         </div>
         
-        <div class="content">
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Безопасность</h3>
-                        <p>Сквозное шифрование всех сообщений. Ваши данные под надежной защитой.</p>
-                    </div>
-                </div>
+        <div class="download-section">
+            <h2 class="download-title">Скачать приложение</h2>
+            
+            <p class="download-subtitle">
+                Береста Мессенджер для Android
+            </p>
+            
+            <div class="download-buttons">
+                <a href="https://drive.usercontent.google.com/download?id=1qwHN7cCzYL80WBN_R6ay5TEfPcKhbhIb&export=download&authuser=0&confirm=t&uuid=46890694-9f56-4a8a-b175-b520285643e0&at=AGN2oQ2FEOyJgWQuoE-AeMonsVQQ%3A1773134750587" 
+                   class="btn-download" 
+                   id="downloadBtn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fas fa-download"></i>
+                    Скачать APK (200 MB)
+                </a>
                 
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Аудио и видеозвонки</h3>
-                        <p>Высокое качество связи. Звоните друзьям и близким бесплатно.</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-images"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Обмен файлами</h3>
-                        <p>Отправляйте фото, видео, документы. Поддержка всех форматов.</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Групповые чаты</h3>
-                        <p>Создавайте группы до 100 участников. Общайтесь с командой или семьей.</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Мгновенная доставка</h3>
-                        <p>Сообщения доставляются за доли секунды. Всегда оставайтесь на связи.</p>
-                    </div>
-                </div>
-                
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>Работа без RuStore</h3>
-                        <p>Приложение доступно для скачивания напрямую с официального сайта.</p>
-                    </div>
-                </div>
+                <a href="#" class="btn-secondary" id="howToInstallBtn">
+                    <i class="fas fa-question-circle"></i>
+                    Как установить
+                </a>
             </div>
             
-            <div class="download-section">
-                <h2 class="download-title">Скачать приложение</h2>
-                
-                <div class="whats-new">
-                    <h3><i class="fas fa-star"></i> Что нового в версии 2.0.0:</h3>
-                    <ul>
-                        <li>Полная переработка интерфейса</li>
-                        <li>Улучшено качество видеозвонков</li>
-                        <li>Добавлена поддержка групповых аудиозвонков</li>
-                        <li>Исправлены ошибки отправки файлов</li>
-                        <li>Увеличена скорость загрузки сообщений</li>
-                    </ul>
-                </div>
-                
-                <p class="download-subtitle">
-                    Береста Мессенджер для Android<br>
-                    <strong>Версия 2.0.0 (стабильная)</strong>
-                </p>
-                
-                <div class="alert">
-                    <i class="fas fa-info-circle"></i>
-                    Приложение не в RuStore. Скачивайте напрямую с официального сайта.
-                </div>
-                
-                <div class="download-buttons">
-                    <a href="https://drive.usercontent.google.com/download?id=1qwHN7cCzYL80WBN_R6ay5TEfPcKhbhIb&export=download&authuser=0&confirm=t&uuid=46890694-9f56-4a8a-b175-b520285643e0&at=AGN2oQ2FEOyJgWQuoE-AeMonsVQQ%3A1773134750587" 
-                       class="btn-download" 
-                       id="downloadBtn"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        <i class="fas fa-download"></i>
-                        Скачать APK (200 MB)
-                    </a>
-                    
-                    <a href="#" class="btn-secondary" id="howToInstallBtn">
-                        <i class="fas fa-question-circle"></i>
-                        Как установить
-                    </a>
-                </div>
-                
-                <div class="qr-code" id="qrCode" style="display: none;">
-                    <img src="#" alt="QR Code для скачивания" id="qrImage">
-                    <p>Наведите камеру телефона для скачивания</p>
-                </div>
-                
-                <div class="version-info">
-                    <p>Последнее обновление: 10 марта 2026</p>
-                    <p>Требуется Android 7.0 и выше</p>
-                    <p>Размер APK: 200 MB</p>
-                </div>
-                
-                <div class="direct-link">
-                    <strong>Прямая ссылка:</strong><br>
-                    https://drive.usercontent.google.com/download?id=1qwHN7cCzYL80WBN_R6ay5TEfPcKhbhIb&export=download&authuser=0&confirm=t&uuid=46890694-9f56-4a8a-b175-b520285643e0&at=AGN2oQ2FEOyJgWQuoE-AeMonsVQQ%3A1773134750587
-                </div>
-                
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">15K+</div>
-                        <div class="stat-label">Скачиваний</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4.9</div>
-                        <div class="stat-label">Рейтинг</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2.0.0</div>
-                        <div class="stat-label">Версия</div>
-                    </div>
-                </div>
+            <div class="qr-code" id="qrCode" style="display: none;">
+                <img src="#" alt="QR Code для скачивания" id="qrImage">
+                <p>Наведите камеру телефона для скачивания</p>
+            </div>
+            
+            <div class="version-info">
+                <p>Последнее обновление: 10 марта 2026</p>
+                <p>Требуется Android 7.0 и выше</p>
+            </div>
+            
+            <div class="direct-link">
+                <strong>Прямая ссылка:</strong><br>
+                https://drive.usercontent.google.com/download?id=1qwHN7cCzYL80WBN_R6ay5TEfPcKhbhIb&export=download&authuser=0&confirm=t&uuid=46890694-9f56-4a8a-b175-b520285643e0&at=AGN2oQ2FEOyJgWQuoE-AeMonsVQQ%3A1773134750587
             </div>
         </div>
         
@@ -573,7 +328,6 @@
                 <a href="#" id="privacyLink">Политика конфиденциальности</a>
                 <a href="#" id="termsLink">Пользовательское соглашение</a>
                 <a href="#" id="supportLink">Поддержка</a>
-                <a href="#" id="updatesLink">История обновлений</a>
             </div>
             
             <div class="social-links">
@@ -583,7 +337,7 @@
             </div>
             
             <div class="copyright">
-                © 2026 Береста Мессенджер. Все права защищены.
+                © 2026 Береста Мессенджер
             </div>
         </div>
     </div>
@@ -594,14 +348,14 @@
             <h3 style="margin-bottom: 20px; color: #333;">Как установить приложение</h3>
             <ol style="margin-left: 20px; line-height: 1.8; color: #666;">
                 <li>Нажмите кнопку "Скачать APK" выше</li>
-                <li>На телефоне откройте настройки безопасности</li>
-                <li>Разрешите установку из неизвестных источников</li>
-                <li>Откройте скачанный файл и нажмите "Установить"</li>
+                <li>После загрузки откройте файл</li>
+                <li>Разрешите установку из неизвестных источников (если потребуется)</li>
+                <li>Нажмите "Установить"</li>
                 <li>Готово! Приложение появится в меню приложений</li>
             </ol>
             <p style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 10px; color: #0d47a1;">
                 <i class="fas fa-shield-alt"></i>
-                Приложение безопасно. APK загружен на Google Drive и проверен.
+                APK загружен на Google Drive и проверен.
             </p>
             <button onclick="closeModal()" style="margin-top: 20px; padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 10px; cursor: pointer; width: 100%;">Понятно</button>
         </div>
@@ -611,9 +365,9 @@
         // Ссылка на скачивание (ваша прямая ссылка)
         const DOWNLOAD_URL = 'https://drive.usercontent.google.com/download?id=1qwHN7cCzYL80WBN_R6ay5TEfPcKhbhIb&export=download&authuser=0&confirm=t&uuid=46890694-9f56-4a8a-b175-b520285643e0&at=AGN2oQ2FEOyJgWQuoE-AeMonsVQQ%3A1773134750587';
         
-        // Обработчик скачивания (для аналитики)
+        // Обработчик скачивания
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
-            console.log('Скачивание версии 2.0.0 началось');
+            console.log('Скачивание началось');
             
             // Показываем QR код
             const qrDiv = document.getElementById('qrCode');
@@ -648,25 +402,20 @@
             }
         };
         
-        // Ссылки на документы (позже замените на реальные)
+        // Ссылки на документы
         document.getElementById('privacyLink').addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Политика конфиденциальности будет доступна после загрузки');
+            alert('Политика конфиденциальности будет доступна позже');
         });
         
         document.getElementById('termsLink').addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Пользовательское соглашение будет доступно после загрузки');
+            alert('Пользовательское соглашение будет доступно позже');
         });
         
         document.getElementById('supportLink').addEventListener('click', function(e) {
             e.preventDefault();
             alert('Для связи: support@beresta.ru');
-        });
-        
-        document.getElementById('updatesLink').addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Версия 2.0.0 - март 2026\n- Полная переработка интерфейса\n- Улучшено качество видеозвонков\n- Добавлены групповые аудиозвонки\n- Исправлены ошибки');
         });
     </script>
 </body>
