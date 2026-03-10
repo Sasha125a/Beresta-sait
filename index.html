@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Береста Мессенджер | Скачать приложение</title>
+    <meta name="description" content="Береста - безопасный мессенджер с аудио и видеозвонками. Скачайте бесплатно для Android.">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Береста Мессенджер">
+    <meta property="og:description" content="Безопасный мессенджер с аудио и видеозвонками">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beresta.ru">
+    <meta property="og:image" content="images/og-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            font-size: 60px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .logo i {
+            font-size: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .app-name {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .app-tagline {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .app-badges {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .badge i {
+            margin-right: 8px;
+        }
+        
+        .content {
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+        }
+        
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateX(10px);
+            background: #f0f2f5;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .feature-text h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .feature-text p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .download-section {
+            background: #f8f9fa;
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .download-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .download-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .btn-download {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-download:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-download i {
+            font-size: 24px;
+        }
+        
+        .btn-secondary {
+            background: #e9ecef;
+            color: #495057;
+            border: 2px solid #dee2e6;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background: #dee2e6;
+        }
+        
+        .qr-code {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 15px;
+        }
+        
+        .qr-code p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .version-info {
+            margin-top: 20px;
+            color: #adb5bd;
+            font-size: 14px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #495057;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+        }
+        
+        .copyright {
+            color: #868e96;
+            font-size: 14px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #e9ecef;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+            color: #495057;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ffeeba;
+            font-size: 14px;
+        }
+        
+        .alert i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-comments"></i>
+            </div>
+            <h1 class="app-name">Береста</h1>
+            <p class="app-tagline">Безопасный и быстрый мессенджер</p>
+            <div class="app-badges">
+                <span class="badge"><i class="fas fa-shield-alt"></i> Шифрование</span>
+                <span class="badge"><i class="fas fa-video"></i> Видеозвонки</span>
+                <span class="badge"><i class="fas fa-file"></i> Файлы</span>
+                <span class="badge"><i class="fas fa-users"></i> Группы</span>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Безопасность</h3>
+                        <p>Сквозное шифрование всех сообщений. Ваши данные под надежной защитой.</p>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Аудио и видеозвонки</h3>
+                        <p>Высокое качество связи. Звоните друзьям и близким бесплатно.</p>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Обмен файлами</h3>
+                        <p>Отправляйте фото, видео, документы. Поддержка всех форматов.</p>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Групповые чаты</h3>
+                        <p>Создавайте группы до 100 участников. Общайтесь с командой или семьей.</p>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Мгновенная доставка</h3>
+                        <p>Сообщения доставляются за доли секунды. Всегда оставайтесь на связи.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-section">
+                <h2 class="download-title">Скачать приложение</h2>
+                <p class="download-subtitle">
+                    Береста Мессенджер для Android<br>
+                    Версия 1.0.0 (стабильная)
+                </p>
+                
+                <div class="alert">
+                    <i class="fas fa-info-circle"></i>
+                    Приложение не в RuStore. Скачивайте напрямую с официального сайта.
+                </div>
+                
+                <div class="download-buttons">
+                    <a href="#" class="btn-download" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        Скачать APK (35 MB)
+                    </a>
+                    
+                    <a href="#" class="btn-secondary" id="howToInstallBtn">
+                        <i class="fas fa-question-circle"></i>
+                        Как установить
+                    </a>
+                </div>
+                
+                <div class="qr-code" id="qrCode" style="display: none;">
+                    <img src="#" alt="QR Code для скачивания" id="qrImage">
+                    <p>Наведите камеру телефона для скачивания</p>
+                </div>
+                
+                <div class="version-info">
+                    <p>Последнее обновление: 10 марта 2026</p>
+                    <p>Требуется Android 6.0 и выше</p>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Скачиваний</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">Рейтинг</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1.0.0</div>
+                        <div class="stat-label">Версия</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#" id="privacyLink">Политика конфиденциальности</a>
+                <a href="#" id="termsLink">Пользовательское соглашение</a>
+                <a href="#" id="supportLink">Поддержка</a>
+                <a href="#" id="updatesLink">История обновлений</a>
+            </div>
+            
+            <div class="social-links">
+                <a href="#" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" title="VK"><i class="fab fa-vk"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            
+            <div class="copyright">
+                © 2026 Береста Мессенджер. Все права защищены.
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно с инструкцией по установке -->
+    <div id="installModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 1000;">
+        <div style="background: white; padding: 30px; border-radius: 20px; max-width: 500px; margin: 20px;">
+            <h3 style="margin-bottom: 20px; color: #333;">Как установить приложение</h3>
+            <ol style="margin-left: 20px; line-height: 1.8; color: #666;">
+                <li>Скачайте APK файл по кнопке выше</li>
+                <li>На телефоне откройте настройки безопасности</li>
+                <li>Разрешите установку из неизвестных источников</li>
+                <li>Откройте скачанный файл и нажмите "Установить"</li>
+                <li>Готово! Приложение появится в меню приложений</li>
+            </ol>
+            <p style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 10px; color: #0d47a1;">
+                <i class="fas fa-shield-alt"></i>
+                Приложение безопасно. Мы проверяем каждый APK перед публикацией.
+            </p>
+            <button onclick="closeModal()" style="margin-top: 20px; padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 10px; cursor: pointer; width: 100%;">Понятно</button>
+        </div>
+    </div>
+    
+    <script>
+        // Данные для скачивания
+        const APP_VERSION = '1.0.0';
+        const APP_SIZE = '35 MB';
+        const DOWNLOAD_URL = '#'; // Замените на реальную ссылку на APK
+        
+        // Обработчик скачивания
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Здесь можно добавить счетчик скачиваний
+            console.log('Скачивание началось');
+            
+            // Показываем QR код
+            const qrDiv = document.getElementById('qrCode');
+            qrDiv.style.display = 'block';
+            
+            // Генерируем QR код через API
+            generateQRCode(DOWNLOAD_URL);
+            
+            // Если есть реальная ссылка, перенаправляем
+            if (DOWNLOAD_URL !== '#') {
+                window.location.href = DOWNLOAD_URL;
+            } else {
+                alert('Ссылка на скачивание появится после загрузки APK на сервер');
+            }
+        });
+        
+        // Функция генерации QR кода
+        function generateQRCode(url) {
+            const qrImage = document.getElementById('qrImage');
+            // Используем бесплатный API для генерации QR кода
+            qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(url)}`;
+        }
+        
+        // Открыть модальное окно с инструкцией
+        document.getElementById('howToInstallBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('installModal').style.display = 'flex';
+        });
+        
+        // Закрыть модальное окно
+        window.closeModal = function() {
+            document.getElementById('installModal').style.display = 'none';
+        };
+        
+        // Закрыть по клику на фон
+        window.onclick = function(event) {
+            const modal = document.getElementById('installModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+        
+        // Ссылки на документы (позже замените на реальные)
+        document.getElementById('privacyLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Политика конфиденциальности будет доступна после загрузки');
+        });
+        
+        document.getElementById('termsLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Пользовательское соглашение будет доступно после загрузки');
+        });
+        
+        document.getElementById('supportLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Для связи: support@beresta.ru');
+        });
+        
+        document.getElementById('updatesLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Версия 1.0.0 - первый стабильный релиз');
+        });
+        
+        // Анимация при скролле
+        window.addEventListener('scroll', function() {
+            const features = document.querySelectorAll('.feature');
+            features.forEach(feature => {
+                const rect = feature.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateX(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
