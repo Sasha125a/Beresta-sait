@@ -102,6 +102,22 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
+        .warning-note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 40px 0;
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid #ffeeba;
+        }
+        
+        .warning-note i {
+            margin-right: 8px;
+            color: #f0ad4e;
+        }
+        
         .download-section {
             padding: 50px 40px;
             text-align: center;
@@ -284,6 +300,13 @@
             </div>
         </div>
         
+        <div class="warning-note">
+            <i class="fas fa-shield-alt"></i>
+            Если Google Drive показывает предупреждение "не удалось проверить на вирусы" — 
+            <strong>нажмите "Скачать всё равно"</strong>. Это стандартное предупреждение для непроверенных файлов, 
+            наше приложение безопасно.
+        </div>
+        
         <div class="download-section">
             <h2 class="download-title">Скачать приложение</h2>
             
@@ -348,6 +371,7 @@
             <h3 style="margin-bottom: 20px; color: #333;">Как установить приложение</h3>
             <ol style="margin-left: 20px; line-height: 1.8; color: #666;">
                 <li>Нажмите кнопку "Скачать APK" выше</li>
+                <li>Если Google Drive показывает предупреждение — нажмите "Скачать всё равно"</li>
                 <li>После загрузки откройте файл</li>
                 <li>Разрешите установку из неизвестных источников (если потребуется)</li>
                 <li>Нажмите "Установить"</li>
@@ -355,7 +379,8 @@
             </ol>
             <p style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 10px; color: #0d47a1;">
                 <i class="fas fa-shield-alt"></i>
-                APK загружен на Google Drive и проверен.
+                APK загружен на Google Drive. Если есть вопросы: 
+                <a href="mailto:beresta.s@mail.ru" style="color: #0d47a1; font-weight: bold;">beresta.s@mail.ru</a>
             </p>
             <button onclick="closeModal()" style="margin-top: 20px; padding: 10px 20px; background: #667eea; color: white; border: none; border-radius: 10px; cursor: pointer; width: 100%;">Понятно</button>
         </div>
@@ -415,7 +440,8 @@
         
         document.getElementById('supportLink').addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Для связи: support@beresta.ru');
+            // Создаем mailto ссылку
+            window.location.href = 'mailto:beresta.s@mail.ru?subject=Поддержка Береста Мессенджер';
         });
     </script>
 </body>
